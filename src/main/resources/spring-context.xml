@@ -3,4 +3,11 @@
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="personServiceImpl" class="ru.otus.spring01.service.PersonServiceImpl">
+        <property name="dao" ref="personDao"/>
+    </bean>
+    <bean id="personDao" class="ru.otus.spring01.dao.PersonDaoSimple">
+        <property name="defaultAge" value="25"/>
+    </bean>
 </beans>
